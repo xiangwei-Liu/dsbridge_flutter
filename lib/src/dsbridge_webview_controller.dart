@@ -63,20 +63,20 @@ class DWebViewController extends WebViewController {
     _setJavaScriptAlertCallback();
     _setJavaScriptConfirmCallback();
     _setJavaScriptPromptCallback();
-    platform.setOnJavaScriptAlertDialog((request) async {
-      // if (!_alertBoxBlock) {
-      //   return;
-      // }
-      javaScriptAlertCallback?.call(request.message);
-    });
+    // platform.setOnJavaScriptAlertDialog((request) async {
+    //   // if (!_alertBoxBlock) {
+    //   //   return;
+    //   // }
+    //   javaScriptAlertCallback?.call(request.message);
+    // });
 
-    platform.setOnJavaScriptConfirmDialog((request) async {
-      // if (!_alertBoxBlock) {
-      //   return true;
-      // }
-      return javaScriptConfirmCallback?.call(request.message) ??
-          Future.value(false);
-    });
+    // platform.setOnJavaScriptConfirmDialog((request) async {
+    //   // if (!_alertBoxBlock) {
+    //   //   return true;
+    //   // }
+    //   return javaScriptConfirmCallback?.call(request.message) ??
+    //       Future.value(false);
+    // });
 
     platform.setOnJavaScriptTextInputDialog((request) async {
       if (request.message.startsWith(_prefix)) {
